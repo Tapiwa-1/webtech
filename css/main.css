@@ -19,7 +19,7 @@ label {
 font-family: Arial;
 font-weight: bold;
 }
-input[type=button] {
+input[type=Submit] {
   background-color: #0081C6;
   color: white;
   padding: 12px 20px;
