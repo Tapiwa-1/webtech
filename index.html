@@ -5,24 +5,18 @@
 <title>Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/main.css" rel="stylesheet" type="text/css">
-<script LANGUAGE="javascript" type="text/javascript">
-	function myFunction() {
-
-	}
-</script>
-	
 </head>
 
 <body>
 	<h2>This is my form</h2>
 	<div class="container">
-		<form id="myForm" name="form1">
+		<form id="myForm" name="form1" method="POST">
 			<div class="row">
 				<div class="col-25">
 					<label for="fname">First Name: </label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="fname" name="firstname" placeholder="Your Name"/>
+					<input type="text" id="fname" name="fname" placeholder="Your Name"/>
 				</div>
 			</div>
 			<div class="row">
@@ -50,7 +44,18 @@
 				</div>
 			</div>
 			 <div class="row">
-    			<input type="button" value="Submit" onClick="myFuction" >
+    			<input type="Submit" value="Submit" onClick="myFuction" id="Submit" >
+				 <script>
+					window.onload = function(){
+						document.getElementById('Submit').onclick = function(e){
+							alert("Name: "+ document.getElementById("fname").value + "\nNumber: " +document.getElementById("number").value + "\nEmail: "+ document.getElementById("email").value +"\nEnqueries: "+ document.getElementById("Enqueries").value);
+							document.getElementById("myForm").reset();
+							return false;
+
+						}
+						
+					}
+				</script>
   			</div>
 		</form>
 	</div>
