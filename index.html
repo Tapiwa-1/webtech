@@ -5,6 +5,25 @@
 <title>Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/main.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="Js/main.js"></script>
+<script>
+	$(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "#0081C6");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "white");
+  });
+  $("textarea").focus(function(){
+    $(this).css("background-color", "#0081C6");
+  });
+  $("textarea").blur(function(){
+    $(this).css("background-color", "white");
+  });
+  
+});
+</script>
 </head>
 
 <body>
@@ -45,17 +64,7 @@
 			</div>
 			 <div class="row">
     			<input type="Submit" value="Submit" onClick="myFuction" id="Submit" >
-				 <script>
-					window.onload = function(){
-						document.getElementById('Submit').onclick = function(e){
-							alert("Name: "+ document.getElementById("fname").value + "\nNumber: " +document.getElementById("number").value + "\nEmail: "+ document.getElementById("email").value +"\nEnqueries: "+ document.getElementById("Enqueries").value);
-							document.getElementById("myForm").reset();
-							return false;
-
-						}
-						
-					}
-				</script>
+				 
   			</div>
 		</form>
 	</div>
